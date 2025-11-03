@@ -1,6 +1,5 @@
 import { routing } from '@/i18n/routing';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 
@@ -19,8 +18,6 @@ export default function LocaleLayout({
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
-
-  unstable_setRequestLocale(locale);
   
   const messages = useMessages();
 

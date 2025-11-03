@@ -2,16 +2,9 @@ import { MagicianProfile, TestimonialCard } from '@/components/MagicianProfile';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from '@/i18n/api.server';
 import { Link } from '@/i18n/routing';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default async function HomePage({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
-  unstable_setRequestLocale(locale);
-
-  const t = await getTranslations({ locale, namespace: 'portfolio' });
+export default async function HomePage() {
+  const t = await getTranslations('portfolio');
 
   const stats = t.raw('user.stats');
   const testimonialsHeading = t('testimonials.heading');

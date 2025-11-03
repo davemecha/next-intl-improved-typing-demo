@@ -7,6 +7,11 @@ export const routing = defineRouting({
 
   // Used when no locale matches
   defaultLocale: 'en',
+
+  // Define the pathnames for your pages
+  pathnames: {
+    '/': '/',
+  },
 });
 
 export const { Link, redirect, usePathname, useRouter } = createLocalizedPathnamesNavigation(routing);
