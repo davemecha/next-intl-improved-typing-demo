@@ -1,8 +1,8 @@
 import { MagicianProfile, TestimonialCard } from '@/components/MagicianProfile';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from '@/i18n/api.server';
+import { Link } from '@/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
 
 export default async function HomePage({
   params: { locale },
