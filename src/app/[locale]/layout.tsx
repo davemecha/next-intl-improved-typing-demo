@@ -1,6 +1,6 @@
 import { routing } from '@/i18n/routing';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 
@@ -8,7 +8,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
   params: { locale },
 }: {
@@ -22,7 +22,7 @@ export default async function LocaleLayout({
 
   unstable_setRequestLocale(locale);
   
-  const messages = await getMessages();
+  const messages = useMessages();
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
