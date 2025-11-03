@@ -1,0 +1,35 @@
+{
+  "portfolio": {
+    "title": "Magier Portfolio",
+    "user": {
+      "profile": {
+        "heading": "Benutzerprofil",
+        "bio": "Zauberer mit 10 Jahren Erfahrung",
+        "settings": {
+          "title": "Einstellungen",
+          "themeLabel": "Design",
+          "languageLabel": "Sprache"
+        }
+      },
+      "stats": {
+        "shows": "Aufgeführte Shows",
+        "audience": "Gesamtpublikum"
+      }
+    },
+    "testimonials": {
+      "heading": "Was die Leute sagen",
+      "items": {
+        "john": {
+          "name": "John Smith",
+          "text": "Atemberaubende Illusionen!",
+          "rating": 5
+        },
+        "jane": {
+          "name": "Jane Doe",
+          "text": "Beste Zaubershow aller Zeiten!",
+          "rating": 5
+        }
+      }
+    }
+  }
+}

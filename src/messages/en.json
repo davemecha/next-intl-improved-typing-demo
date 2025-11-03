@@ -1,0 +1,35 @@
+{
+  "portfolio": {
+    "title": "Magic Portfolio",
+    "user": {
+      "profile": {
+        "heading": "User Profile",
+        "bio": "Magician with 10 years of experience",
+        "settings": {
+          "title": "Settings",
+          "themeLabel": "Theme",
+          "languageLabel": "Language"
+        }
+      },
+      "stats": {
+        "shows": "Shows Performed",
+        "audience": "Total Audience"
+      }
+    },
+    "testimonials": {
+      "heading": "What People Say",
+      "items": {
+        "john": {
+          "name": "John Smith",
+          "text": "Mind-blowing illusions!",
+          "rating": 5
+        },
+        "jane": {
+          "name": "Jane Doe",
+          "text": "Best magic show ever!",
+          "rating": 5
+        }
+      }
+    }
+  }
+}
