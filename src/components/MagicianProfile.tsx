@@ -9,14 +9,20 @@ export function MagicianProfile() {
 
   // ✅ Standard translation (string keys)
   const title = t('title');
+  //    ^?
 
   // ✅ raw() with full type safety - returns the entire object
   const profile = t.raw('user.profile');
+  //    ^?
   // Type: { heading: string, bio: string, settings: { title: string, themeLabel: string, languageLabel: string } }
 
   // ✅ raw() for deeply nested objects
   const settings = t.raw('user.profile.settings');
+  //    ^?
   // Type: { title: string, themeLabel: string, languageLabel: string }
+
+  const settingsTitle = t.raw('user.profile.settings.title');
+  //    ^?
 
   return (
     <Card>
@@ -52,6 +58,16 @@ export function TestimonialCard({ itemKey }: TestimonialProps) {
   // ✅ Combine dynamic key with raw() for full object access
   const testimonial = t.raw(`testimonials.items.${itemKey}`);
   // Type: { name: string, text: string, rating: number }
+
+
+  // Alternative usage scenario
+  // ✅ get translator for deeply nested namespace
+  const t2 = useTranslations('portfolio.testimonials.items');
+
+  // ✅ use raw() with dynamic key for full object access
+  const testimonial2 = t2.raw(itemKey);
+  // Type: { name: string, text: string, rating: number }
+
 
   return (
     <Card>

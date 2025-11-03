@@ -89,7 +89,7 @@ export type ChildKeySegments<Namespace extends AllKeys> = keyof NestedValue<Name
  * It basically just concatenates the namespace and the subkey with a dot.
  */
 export type BuildKey<
-  Namespace extends AllNamesances,
+  Namespace extends AllNamespaces,
   SubKey extends NestedKeys<Namespace>,
 > = Namespace extends AllNamespaces
   ? SubKey extends NestedKeys<Namespace>
