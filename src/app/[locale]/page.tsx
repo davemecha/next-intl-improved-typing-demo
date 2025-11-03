@@ -12,6 +12,19 @@ export default async function HomePage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl space-y-8 px-4 py-8 sm:px-6 lg:px-8">
+        <div className="flex justify-end gap-4">
+          <Button asChild>
+            <Link href="/" locale="en">
+              English
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link href="/" locale="de">
+              Deutsch
+            </Link>
+          </Button>
+        </div>
+
         <header className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             {t('title')}
@@ -46,19 +59,6 @@ export default async function HomePage() {
             <TestimonialCard itemKey="jane" />
           </div>
         </section>
-
-        <footer className="flex items-center justify-center gap-4 border-t pt-8">
-          <Button asChild>
-            <Link href="/" locale="en">
-              English
-            </Link>
-          </Button>
-          <Button asChild>
-            <Link href="/" locale="de">
-              Deutsch
-            </Link>
-          </Button>
-        </footer>
       </div>
     </main>
   );
